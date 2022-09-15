@@ -76,5 +76,3 @@ add_action('after_setup_theme', 'mytheme_add_woocommerce_support', 0);
 
 
 require get_template_directory() . '/inc/wc-modifications.php';
-dsfsdfs
-dsfsdfsd
