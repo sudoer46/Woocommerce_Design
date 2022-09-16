@@ -21,7 +21,43 @@ Use it to make something cool, have fun, and share what you've learned
 with others.
 */
 
+/* Fonts */
+@font-face {
+	font-family: 'Rajdhani';  
+	src: url('fonts/rajdhani/Rajdhani-Regular.woff') format('woff');  
+	font-weight: 400;  
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Rajdhani';  
+	src: url('fonts/rajdhani/Rajdhani-Medium.woff') format('woff');   
+	font-weight: 500;  
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Rajdhani';  
+	src: url('fonts/rajdhani/Rajdhani-SemiBold.woff') format('woff');  
+	font-weight: 600;  
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Rajdhani';  
+	src: url('fonts/rajdhani/Rajdhani-Bold.woff') format('woff');  
+	font-weight: 700;  
+    font-style: normal;
+}
+/* seaweed-script-regular - latin */
+@font-face {
+    font-family: 'Seaweed_Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/seaweed-script/SeaweedScript-Regular.woff') format('woff');  
+}
 
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
 
 /* Header - Main Menu */
 .main-menu{
