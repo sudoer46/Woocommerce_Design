@@ -28,7 +28,7 @@
         <header>
             <section class="search">
                 <div class="container">
-                    Search
+                    <?php get_search_form(); ?>
                 </div>
             </section>
             <section class="top-bar">
