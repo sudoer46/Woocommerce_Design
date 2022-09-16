@@ -27,8 +27,11 @@
     <div id="page" class="site">
         <header>
             <section class="search">
-                <div class="container">
-                    <?php get_search_form(); ?>
+                <div class="container ">
+                    <div class="text-center d-md-flex align-items-center">
+                        <?php get_search_form(); ?>
+                    </div>
+
                 </div>
             </section>
             <section class="top-bar">
