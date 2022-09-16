@@ -76,6 +76,6 @@ add_action('after_setup_theme', 'mytheme_add_woocommerce_support', 0);
 
 //check if woocommerce exists
 
-if (class_exists("WooCommerc")) {
+if (class_exists("WooCommerce")) {
     require get_template_directory() . '/inc/wc-modifications.php';
 }

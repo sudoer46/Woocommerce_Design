@@ -75,6 +75,24 @@ with others.
 
 /* WooCommerce */
 
+/* Grid System */
+/* set this equivalent to six column boostrap class*/
+.woocommerce .col2-set .col-1,
+.woocommerce .col2-set .col-2{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/*for smaller devices */
+@media all and (max-width: 767px){
+    .woocommerce .col2-set .col-1,
+    .woocommerce .col2-set .col-2{
+    flex: 0 0 100%;
+    max-width: 100%;
+    }   
+}
+
+
 /* Shop */
 
 .shop-content{
@@ -301,6 +319,20 @@ with others.
     width: 150px;
 }
 
+/* Checkout */
+.woocommerce form .form-row {
+    display: block;
+}
+.woocommerce-checkout #customer_details{
+    margin-bottom: 20px;
+}
+.woocommerce table.shop_table{
+    border-collapse: collapse;
+}
+.woocommerce table.shop_table thead{
+    background-color: #D2335B;
+    color: #fff;
+}
 
 /* General */
 
