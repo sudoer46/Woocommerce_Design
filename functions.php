@@ -74,5 +74,8 @@ function mytheme_add_woocommerce_support()
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support', 0);
 
+//check if woocommerce exists
 
-require get_template_directory() . '/inc/wc-modifications.php';
+if (class_exists("WooCommerc")) {
+    require get_template_directory() . '/inc/wc-modifications.php';
+}
