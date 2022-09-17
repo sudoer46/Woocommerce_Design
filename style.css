@@ -109,7 +109,27 @@ body{
     padding: 0.3rem 1rem;
     margin-right: 0.3rem;
 }
+/*cart*/
+.cart .cart-icon{
+    background: url('img/cart.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: bottom;
 
+    
+}
+
+.cart .items{
+    background: #ca2424;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
 /* Footer - Footer Menu */
 .footer-menu ul, .footer-widgets ul{ 
     list-style: none; 

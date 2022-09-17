@@ -14,6 +14,8 @@
 
     <button type="submit" class="search-submit"><span class="screen-reader-text"><?php echo _x('Search', 'submit button', 'stylemaven'); ?></span></button>
     <?php if (class_exists("WooCommerce")) : ?>
+        <!-- this uses the archive-product.php page -->
         <input type="hidden" value="product" name="post_type" id="post_type" />
     <?php endif; ?>
+    <!-- Use index php for non woocommerce search -->
 </form>
