@@ -16,6 +16,8 @@ if (!file_exists(get_template_directory() . '/inc/class-wp-bootstrap-navwalker.p
     require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 }
 
+//customerizer includes
+require_once get_template_directory() . '/inc/customizer.php';
 
 if (!isset($content_width))
     $content_width = 600;
