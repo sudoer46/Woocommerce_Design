@@ -65,6 +65,15 @@ add_action('after_setup_theme', 'style_maven_config', 0);
 function mytheme_add_woocommerce_support()
 {
     add_theme_support(
+        'custom-logo',
+        array(
+            'height' => 85,
+            'width' => 160,
+            'flex-height' => true,
+            'flex-width' => true,
+        )
+    );
+    add_theme_support(
         'woocommerce',
         array(
             'thumbnail_image_width' => 255,
