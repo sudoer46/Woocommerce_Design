@@ -36,6 +36,11 @@ if (!function_exists('style_maven_scripts')) {
         wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', ['jquery'], '4.3.1', true);
         wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '4.3.1', 'all');
         wp_enqueue_style('style-maven-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
+
+        //Flexslider files
+        wp_enqueue_script('flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', ['jquery'], '', true);
+        wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', [], '', 'all');
+        wp_enqueue_script('flexslider.js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', ['jquery'], '', true);
     }
 
     add_action('wp_enqueue_scripts', 'style_maven_scripts');
@@ -66,6 +71,7 @@ add_action('after_setup_theme', 'style_maven_config', 0);
 
 function mytheme_add_woocommerce_support()
 {
+    //custom logo
     add_theme_support(
         'custom-logo',
         array(
@@ -75,6 +81,9 @@ function mytheme_add_woocommerce_support()
             'flex-width' => true,
         )
     );
+
+    add_image_size('style-maven-slider', 1920, 800, ['center', 'center']);
+
     add_theme_support(
         'woocommerce',
         array(
