@@ -12,18 +12,19 @@ get_header(); ?>
             <!-- Slider Code - do not change class names-->
             <div class="flexslider">
                 <ul class="slides">
+
+                    <?php
+                    for ($i = 1; $i < 4; $i++) {
+                        $slider_page[$i] = get_theme_mod('set_slider_page' . $i);
+                        $slider_button_text[$i] = get_theme_mod('set_slider_button_text' . $i);
+                        $slider_button_url[$i] = get_theme_mod('set_slider_button_url' . $i);
+                    }
+                    ?>
                     <li>
                         <img src="slide1.jpg" />
                     </li>
-                    <li>
-                        <img src="slide2.jpg" />
-                    </li>
-                    <li>
-                        <img src="slide3.jpg" />
-                    </li>
-                    <li>
-                        <img src="slide4.jpg" />
-                    </li>
+                    <?php
+                    ?>
                 </ul>
         </section>
 
