@@ -14,16 +14,37 @@ get_header(); ?>
                 <ul class="slides">
 
                     <?php
+                    //Create arrays that store the data we want to display
                     for ($i = 1; $i < 4; $i++) {
                         $slider_page[$i] = get_theme_mod('set_slider_page' . $i);
                         $slider_button_text[$i] = get_theme_mod('set_slider_button_text' . $i);
                         $slider_button_url[$i] = get_theme_mod('set_slider_button_url' . $i);
                     }
+
+
+
+                    $args = array(
+                        'post_type' => 'page',
+                        'posts_per_page' => 3,
+                        'post__in' => $slider_page,
+                        'orderby' => 'post__in'
+
+                    );
+                    $slider_loop = new WP_Query($args);
+
+
+                    if ($slider_loop->have_posts()) :
+                        while ($slider_loop->have_posts()) : $slider_loop->the_post();
+                            // do stuff ... 
                     ?>
-                    <li>
-                        <img src="slide1.jpg" />
-                    </li>
+                            <li>
+                                <?php the_post_thumbnail('style-maven-slider', array('class' => 'img-fluid')); ?>
+
+                            </li>
                     <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    endif;
                     ?>
                 </ul>
         </section>
