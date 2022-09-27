@@ -80,5 +80,6 @@ function style_maven_wc_modify()
     {
         echo '</div>';
     }
+    //add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
 }
 add_action('wp', 'style_maven_wc_modify');

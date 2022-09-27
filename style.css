@@ -59,6 +59,11 @@ body{
     font-weight: 400;
 }
 
+/*Home Template */
+/* .home .woocommerce-loop-product__title +p{
+    display: none;
+} */
+
 /* Header - Main Menu */
 .main-menu{
     padding: 0;
