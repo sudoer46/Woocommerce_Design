@@ -64,6 +64,26 @@ get_header(); ?>
                     ?>
                 </ul>
         </section>
+        <section class="popular-products">
+            <div class="container">
+                <h2>Popular Products</h2>
+                <?php echo do_shortcode(
+                    '[products limit="4" columns="4" orderby="popularity"]'
+                );
+                ?>
+
+            </div>
+        </section>
+        <section class="new-arrivals">
+            <div class="container">
+                <h2>New Arrivals</h2>
+                <?php echo do_shortcode(
+                    '[products limit="4" columns="4" orderby="date" order="descending" visiblity="visible"]'
+                );
+                ?>
+
+            </div>
+        </section>
 
         <section class="lab-blog">
             <div class="container">
