@@ -281,6 +281,123 @@ function style_maven_customizer($wp_customize)
             'type' => 'url'
         )
     );
+
+    /** Home Page Product Management */
+
+    //Slider Section
+    $wp_customize->add_section(
+        'sec_home_page',
+        array(
+            'title' => 'Home Page Products and Blog Settings',
+            'description' => 'Settings for Product Selection Section'
+        )
+    );
+    //Field 1 - Number of popular products to display
+
+    $wp_customize->add_setting(
+        'set_popular_max_num',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '9',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'set_popular_max_num',
+        array(
+            'label' => 'Popular Products Max Number',
+            'description' => 'Set number of popular products on home page',
+            'section' => 'sec_home_page',
+            'type' => 'number'
+        )
+    );
+
+    //Field 2 - Number of popular  column display
+
+    $wp_customize->add_setting(
+        'set_popular_cols_numb',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '3',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'set_popular_cols_numb',
+        array(
+            'label' => 'Set number of popular product columns',
+            'description' => 'Set number of columns on home page',
+            'section' => 'sec_home_page',
+            'type' => 'number'
+        )
+    );
+
+    /* Arrivals */
+
+
+    //Field 1 - Number of new arrival products to display
+
+    $wp_customize->add_setting(
+        'set_arrivals_max_num',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '9',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'set_arrivals_max_num',
+        array(
+            'label' => 'New Arrivals Max Number',
+            'description' => 'Set number of new products on home page',
+            'section' => 'sec_home_page',
+            'type' => 'number'
+        )
+    );
+
+    //Field 2 - Number of new column display
+
+    $wp_customize->add_setting(
+        'set_arrivals_cols_num',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '3',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'set_arrivals_cols_num',
+        array(
+            'label' => 'New Arrivals Max Columns ',
+            'description' => 'Set number of new product colums on home page',
+            'section' => 'sec_home_page',
+            'type' => 'number'
+        )
+    );
 }
 
 add_action('customize_register', 'style_maven_customizer');
