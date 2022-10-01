@@ -379,7 +379,7 @@ function style_maven_customizer($wp_customize)
         'set_arrivals_cols_num',
         array(
             'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
-            'default'           => '3',
+            'default'           => '',
             'sanitize_callback' => 'absint'
         )
     );
