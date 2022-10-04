@@ -97,26 +97,37 @@ get_header(); ?>
 
             </div>
         </section>
-        <section class="deal-of-the-week">
-            <?php
-            $product_of_week = get_theme_mod('set_deal_of_week');
-            ?>
-            <div class="container">
-                <h2>Deal of the week</h2>
-                <div class="row d-flex align-items-center">
-                    <div class="deal-img col-md-6 col-12 ml-auto text-center">
-                        <?php echo do_shortcode(
-                            '[products ids="' . $product_of_week . '"  visiblity="visible"]'
-                        );
-                        ?>
+        <?php
+        $showdeal = get_theme_mod('toggle_deal_of_week', 0);
+        $deal = get_theme_mod('set_deal_of_week');
+        $currency = get_woocommerce_currency_symbol();
+        //pass in the post id as the key
+        $regular = get_post_meta($deal, '_regular_price', true);
+        $sale = get_post_meta($deal, '_sale_price', true);
+
+
+        if ($showdeal == 1 && (!empty($deal))) :
+            $discount_percentage = absint(100 - (($sale / $regular) * 100));
+        ?>
+
+
+            <section class="deal-of-the-week">
+
+                <div class="container">
+                    <h2>Deal of the week</h2>
+                    <div class="row d-flex align-items-center">
+                        <div class="deal-img col-md-6 col-12 ml-auto text-center">
+                            <?php echo get_the_post_thumbnail($deal, 'large', array('class' => 'img-fluid')); ?>
 
 
 
+
+                        </div>
+                        <div class="deal-desc col-md-4 col-12 mr-auto text-center"></div>
                     </div>
-                    <div class="deal-desc col-md-4 col-12 mr-auto text-center"></div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
         <section class="lab-blog">
             <div class="container">
                 <div class="row">

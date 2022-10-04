@@ -431,7 +431,7 @@ function style_maven_customizer($wp_customize)
         'set_deal_of_week',
         array(
             'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
-            'default'           => '',
+            'default'           => '0',
             'sanitize_callback' => 'style_maven_sanitize_checkbox'
         )
     );
