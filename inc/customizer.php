@@ -398,6 +398,63 @@ function style_maven_customizer($wp_customize)
             'type' => 'number'
         )
     );
+
+    //Deal of week checkbox
+
+    //Deal of the Week Product ID
+
+    $wp_customize->add_setting(
+        'toggle_deal_of_week',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => ''
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'toggle_deal_of_week',
+        array(
+            'label' => 'Display deal of the week',
+            'description' => 'Toggle to display deal of the product of the week',
+            'section' => 'sec_home_page',
+            'type' => 'checkbox'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_deal_of_week',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => 'style_maven_sanitize_checkbox'
+        )
+    );
+
+    //this first paramater must match up with the id used in add_setting()
+    //links the control and the setting
+
+
+    $wp_customize->add_control(
+
+        'set_deal_of_week',
+        array(
+            'label' => 'Product of the week',
+            'description' => 'Set ID of the product of the week',
+            'section' => 'sec_home_page',
+            'type' => 'number'
+        )
+    );
 }
 
 add_action('customize_register', 'style_maven_customizer');
+
+function style_maven_sanitize_checkbox($checked)
+{
+    return ((isset($checked) && true == $checked ? true : false));
+}

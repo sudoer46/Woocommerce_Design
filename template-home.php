@@ -98,10 +98,21 @@ get_header(); ?>
             </div>
         </section>
         <section class="deal-of-the-week">
+            <?php
+            $product_of_week = get_theme_mod('set_deal_of_week');
+            ?>
             <div class="container">
                 <h2>Deal of the week</h2>
                 <div class="row d-flex align-items-center">
-                    <div class="deal-img col-md-6 col-12 ml-auto text-center"></div>
+                    <div class="deal-img col-md-6 col-12 ml-auto text-center">
+                        <?php echo do_shortcode(
+                            '[products ids="' . $product_of_week . '"  visiblity="visible"]'
+                        );
+                        ?>
+
+
+
+                    </div>
                     <div class="deal-desc col-md-4 col-12 mr-auto text-center"></div>
                 </div>
             </div>
