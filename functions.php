@@ -81,8 +81,9 @@ function mytheme_add_woocommerce_support()
             'flex-width' => true,
         )
     );
-
+    add_theme_support('post-thumbnails');
     add_image_size('style-maven-slider', 1920, 800, ['center', 'center']);
+    add_image_size('style-maven-blog', 960, 640, ['center', 'center']);
 
     add_theme_support(
         'woocommerce',

@@ -292,6 +292,30 @@ function style_maven_customizer($wp_customize)
             'description' => 'Settings for Product Selection Section'
         )
     );
+
+    //Field 1 - popular products title
+
+    $wp_customize->add_setting(
+        'set_popular_title',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+
+        'set_popular_title',
+        array(
+            'label' => 'Popular Products Title',
+            'description' => 'Popular Products Title',
+            'section' => 'sec_home_page',
+            'type' => 'text'
+        )
+    );
+
+
     //Field 1 - Number of popular products to display
 
     $wp_customize->add_setting(
@@ -345,6 +369,26 @@ function style_maven_customizer($wp_customize)
     );
 
     /* Arrivals */
+
+    $wp_customize->add_setting(
+        'set_new_arrivals_title',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+
+        'set_new_arrivals_title',
+        array(
+            'label' => 'New Arrivals Title',
+            'description' => 'New Arrivals Title',
+            'section' => 'sec_home_page',
+            'type' => 'text'
+        )
+    );
 
 
     //Field 1 - Number of new arrival products to display
@@ -428,6 +472,27 @@ function style_maven_customizer($wp_customize)
     );
 
     $wp_customize->add_setting(
+        'set_deal_title',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+
+        'set_deal_title',
+        array(
+            'label' => 'Deal of the week Title',
+            'description' => 'Deal Of The Week Title',
+            'section' => 'sec_home_page',
+            'type' => 'text'
+        )
+    );
+
+
+    $wp_customize->add_setting(
         'set_deal_of_week',
         array(
             'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
@@ -448,6 +513,29 @@ function style_maven_customizer($wp_customize)
             'description' => 'Set ID of the product of the week',
             'section' => 'sec_home_page',
             'type' => 'number'
+        )
+    );
+
+
+    //blog title
+
+    $wp_customize->add_setting(
+        'set_blog_title',
+        array(
+            'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control(
+
+        'set_blog_title',
+        array(
+            'label' => 'Blog Title',
+            'description' => 'Set the Title of The Blog',
+            'section' => 'sec_home_page',
+            'type' => 'text'
         )
     );
 }
