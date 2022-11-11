@@ -51,7 +51,9 @@ get_header(); ?>
                             <div class="meta">
                                 <p>Published by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?>
                                     <br>
-                                    Categories: <span><?php the_category(" "); ?></span>
+                                    <?php if (has_category()) : ?>
+                                        Categories: <span><?php the_category(" "); ?></span>
+                                    <?php endif; ?>
                                     <br>
                                     <?php
                                     if (has_tag()) :
