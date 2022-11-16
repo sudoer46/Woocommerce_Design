@@ -47,8 +47,6 @@ get_header(); ?>
                     </article>
                 <?php
                 endwhile;
-
-
                 ?>
             </div>
 

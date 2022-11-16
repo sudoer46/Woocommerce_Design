@@ -68,6 +68,13 @@ get_header(); ?>
 
                     <?php
                     endwhile;
+                    the_posts_pagination(array(
+                        'prev_next' => true,
+                        'prev_text' => "Newer",
+                        'next_text' => "Older",
+                        'before_page_number' => "Page "
+                    ));
+
                 else :
                     ?>
                     <p>Nothing to display</p>
