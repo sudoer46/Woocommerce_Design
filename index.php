@@ -27,6 +27,7 @@ get_header(); ?>
                     while (have_posts()) : the_post();
 
                         // do stuff ...>
+
                 ?>
                         <article <?php post_class(); ?>>
                             <h2>

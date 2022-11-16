@@ -23,25 +23,21 @@ get_header(); ?>
 
                 <?php
                 //if there are any posts
-                if (have_posts()) :
-                    //load post loop
-                    while (have_posts()) : the_post();
 
-                        // do stuff ...>
+                //load post loop
+                while (have_posts()) : the_post();
+
+                    // do stuff ...>
                 ?>
-                        <article class="col">
-                            <h1><?php the_title(); ?></h1>
-                            <div><?php the_content(); ?></div>
-                        </article>
-
-                    <?php
-                    endwhile;
-                else :
-                    ?>
-                    <p>Nothing to display</p>
+                    <article class="col">
+                        <h1><?php the_title(); ?></h1>
+                        <div><?php the_content(); ?></div>
+                    </article>
 
                 <?php
-                endif;
+                endwhile;
+
+
                 ?>
             </div>
 
