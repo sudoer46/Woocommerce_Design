@@ -141,7 +141,7 @@ function style_maven_sidebars()
     register_sidebar(
         array(
             'name'          => __('Style Maven Main Sidebar', 'style_maven'),
-            'description'   => __('Drage and drop widgets here', 'style_maven'),
+            'description'   => __('Drag and drop widgets here', 'style_maven'),
             'id'            => 'style-maven-sidebar-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
