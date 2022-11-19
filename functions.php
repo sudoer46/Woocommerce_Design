@@ -66,6 +66,12 @@ function style_maven_config()
 
         )
     );
+
+    $textdomain = "stylemaven";
+    //child theme
+    load_theme_textdomain($textdomain, get_stylesheet_directory() . '/languages/');
+    //parent
+    load_theme_textdomain($textdomain, get_template_directory() . '/languages/');
 }
 add_action('after_setup_theme', 'style_maven_config', 0);
 
@@ -140,8 +146,8 @@ function style_maven_sidebars()
 {
     register_sidebar(
         array(
-            'name'          => __('Style Maven Main Sidebar', 'style_maven'),
-            'description'   => __('Drag and drop widgets here', 'style_maven'),
+            'name'          => __('Style Maven Main Sidebar', 'stylemaven'),
+            'description'   => __('Drag and drop widgets here', 'stylemaven'),
             'id'            => 'style-maven-sidebar-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -153,8 +159,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => __('Style Maven Woocommerce Sidebar', 'style_maven'),
-            'description'   => __('Drag and drop Woocommerce widgets here', 'style_maven'),
+            'name'          => __('Style Maven Woocommerce Sidebar', 'stylemaven'),
+            'description'   => __('Drag and drop Woocommerce widgets here', 'stylemaven'),
             'id'            => 'style-maven-woocommerce-sidebar-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -165,8 +171,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => __('Style Maven Footer Widget 1', 'style_maven'),
-            'description'   => __('Drag and drop Footer widgets here', 'style_maven'),
+            'name'          => __('Style Maven Footer Widget 1', 'stylemaven'),
+            'description'   => __('Drag and drop Footer widgets here', 'stylemaven'),
             'id'            => 'style-maven-footer-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -176,8 +182,8 @@ function style_maven_sidebars()
     );
     register_sidebar(
         array(
-            'name'          => __('Style Maven Footer Widget 2', 'style_maven'),
-            'description'   => __('Drag and drop Footer widgets here', 'style_maven'),
+            'name'          => __('Style Maven Footer Widget 2', 'stylemaven'),
+            'description'   => __('Drag and drop Footer widgets here', 'stylemaven'),
             'id'            => 'style-maven-footer-2',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -188,8 +194,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => __('Style Maven Footer Widget 3', 'style_maven'),
-            'description'   => __('Drag and drop Footer widgets here', 'style_maven'),
+            'name'          => __('Style Maven Footer Widget 3', 'stylemaven'),
+            'description'   => __('Drag and drop Footer widgets here', 'stylemaven'),
             'id'            => 'style-maven-footer-3',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',

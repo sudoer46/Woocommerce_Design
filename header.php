@@ -88,7 +88,7 @@
                                 <div class="col-12">
                                     <nav class="navbar navbar-expand-md navbar-light" role="navigation">
                                         <!-- Brand and toggle get grouped for better mobile display -->
-                                        <button class=" main-menu navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
+                                        <button class=" main-menu navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'stylemaven'); ?>">
                                             <span class="navbar-toggler-icon"></span>
                                         </button>
 
