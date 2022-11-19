@@ -17,7 +17,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-12">
                     <?php
-                    the_archive_title("<h1>", "</h2>");
+                    the_archive_title("<h1>", "</h1>");
                     //if there are any posts
                     if (have_posts()) :
                         //load post loop
@@ -30,14 +30,14 @@ get_header(); ?>
                         endwhile;
                         the_posts_pagination(array(
                             'prev_next' => true,
-                            'prev_text' => __('Newer', 'stylemaven'),
-                            'next_text' => __('Older', 'stylemaven'),
-                            'before_page_number' => __('Page', 'stylemaven')
+                            'prev_text' => esc_html__('Newer', 'stylemaven'),
+                            'next_text' => esc_html__('Older', 'stylemaven'),
+                            'before_page_number' => esc_html__('Page', 'stylemaven')
                         ));
 
                     else :
                     ?>
-                        <p><?php _e('Nothing to display', 'stylemaven') ?></p>
+                        <p><?php esc_html_e('Nothing to display', 'stylemaven') ?></p>
 
                     <?php
                     endif;
