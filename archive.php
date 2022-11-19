@@ -30,14 +30,14 @@ get_header(); ?>
                         endwhile;
                         the_posts_pagination(array(
                             'prev_next' => true,
-                            'prev_text' => "Newer",
-                            'next_text' => "Older",
-                            'before_page_number' => "Page "
+                            'prev_text' => __('Newer', 'stylemaven'),
+                            'next_text' => __('Older', 'stylemaven'),
+                            'before_page_number' => __('Page', 'stylemaven')
                         ));
 
                     else :
                     ?>
-                        <p>Nothing to display</p>
+                        <p><?php _e('Nothing to display', 'stylemaven') ?></p>
 
                     <?php
                     endif;

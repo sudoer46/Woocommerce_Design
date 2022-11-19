@@ -61,8 +61,8 @@ function style_maven_config()
 
     register_nav_menus(
         array(
-            'style_maven_main_menu' => 'Style Maven Main Menu',
-            'style_maven_footer_menu' => 'Style Maven Footer Menu',
+            'style_maven_main_menu' => __('Style Maven Main Menu', 'stylemaven'),
+            'style_maven_footer_menu' => __('Style Maven Footer Menu', 'stylemaven')
 
         )
     );

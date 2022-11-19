@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="copyright-text col-12 col-md-6">
-                    <?php echo get_theme_mod('set_copyright', 'not fucking defined asshat'); ?>
+                    <?php echo get_theme_mod('set_copyright', _e('not fucking defined asshat', 'stylemaven')); ?>
 
                 </div>
 

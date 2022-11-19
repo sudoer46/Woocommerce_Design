@@ -16,7 +16,7 @@ get_header(); ?>
     <main>
         <div class="container">
             <div class="row">
-                <h1> Search Results For: <?php echo get_search_query(); ?></h1>
+                <h1> <?php _e('Search Results For', 'stylemaven'); ?>: <?php echo get_search_query(); ?></h1>
                 <?php
                 get_search_form();
                 //if there are any posts
@@ -32,14 +32,14 @@ get_header(); ?>
                     endwhile;
                     the_posts_pagination(array(
                         'prev_next' => true,
-                        'prev_text' => "Newer",
-                        'next_text' => "Older",
-                        'before_page_number' => "Page "
+                        'prev_text' => __('Newer', 'stylemaven'),
+                        'next_text' => __('Older', 'stylemaven'),
+                        'before_page_number' => __('Page', 'stylemaven')
                     ));
 
                 else :
                 ?>
-                    <p>There are no results for your term.</p>
+                    <p><?php _e('There are no results for your term', 'stylemaven'); ?></p>
 
                 <?php
                 endif;

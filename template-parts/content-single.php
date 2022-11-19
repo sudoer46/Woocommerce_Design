@@ -11,14 +11,17 @@
 <article id='post-<?php the_ID(); ?>' <?php post_class(); ?>>
     <header>
         <h1><?php the_title(); ?></h1>
-        <div class='meta'>
-            <p>Published by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?>
-                <br />
+        <div class="meta">
+            <p><?php _e('Published by', 'stylemaven') ?> <?php the_author_posts_link(); ?> <?php _e('on', 'stylemaven'); ?> <?php echo get_the_date(); ?>
+                <br>
                 <?php if (has_category()) : ?>
-                    Categories: <span><?php the_category(' '); ?></span><br />
+                    <?php _e('Categories', 'stylemaven') ?>: <span><?php the_category(" "); ?></span>
                 <?php endif; ?>
-                <?php if (has_tag()) : ?>
-                    Tags: <span><?php the_tags('', ', '); ?></span><br />
+                <br>
+                <?php
+                if (has_tag()) :
+                ?>
+                    <?php _e('Tags', 'stylemaven') ?>: <span><?php the_tags("", ", ", ""); ?></span>
                 <?php endif; ?>
             </p>
         </div>
@@ -33,7 +36,7 @@
     <div class='content'>
         <?php
         $args = array(
-            'before'              => '<p class="inner_pagination"><span class="page-link-text">' . 'More pages: ' . '</span>',
+            'before'              => '<p class="inner_pagination"><span class="page-link-text">' . __('More pages', 'stylemaven') . ':' . '</span>',
             'after'               => '</p>'
         );
         wp_link_pages($args);

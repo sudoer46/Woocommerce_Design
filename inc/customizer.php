@@ -13,8 +13,8 @@ function style_maven_customizer($wp_customize)
     $wp_customize->add_section(
         'sec_copyright',
         array(
-            'title' => 'Copyright Settings',
-            'description' => 'Section for copyright information'
+            'title' => __('Copyright Settings', 'stylemaven'),
+            'description' => __('Section for copyright information', 'stylemaven')
         )
     );
 
@@ -37,8 +37,8 @@ function style_maven_customizer($wp_customize)
 
         'set_copyright',
         array(
-            'label' => 'Copyright',
-            'description' => 'Add your copyright info here',
+            'label' => __('Copyright', 'stylemaven'),
+            'description' => __('Add your copyright info here', 'stylemaven'),
             'section' => 'sec_copyright',
             'type' => 'text'
         )
@@ -49,8 +49,8 @@ function style_maven_customizer($wp_customize)
     $wp_customize->add_section(
         'sec_slider',
         array(
-            'title' => 'Slider Settings',
-            'description' => 'Slider Section'
+            'title' => __('Slider Settings', 'stylemaven'),
+            'description' => __('Slider Section', 'stylemaven')
         )
     );
     //Field 1 - slider page number 1
@@ -71,8 +71,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_page1',
         array(
-            'label' => 'Set slider page 1',
-            'description' => 'set slider page 1',
+            'label' => __('Set slider page 1', 'stylemaven'),
+            'description' => __('set slider page 1', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'dropdown-pages'
         )
@@ -96,8 +96,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_text1',
         array(
-            'label' => 'Set Button Text for Page 1',
-            'description' => 'Set Button Text for Page 1',
+            'label' => __('Set Button Text for Page 1', 'stylemaven'),
+            'description' => __('Set Button Text for Page 1', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'text'
         )
@@ -121,8 +121,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_url1',
         array(
-            'label' => 'Set URL for Page 1',
-            'description' => 'Set URL for Page 1',
+            'label' => __('Set URL for Page 1', 'stylemaven'),
+            'description' => __('Set URL for Page 1', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'url'
         )
@@ -148,8 +148,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_page2',
         array(
-            'label' => 'Set slider page 2',
-            'description' => 'set slider page 2',
+            'label' => __('Set slider page 2', 'stylemaven'),
+            'description' => __('set slider page 2', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'dropdown-pages'
         )
@@ -173,8 +173,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_text2',
         array(
-            'label' => 'Set Button Text for Page 2',
-            'description' => 'Set Button Text for Page 2',
+            'label' => __('Set Button Text for Page 2', 'stylemaven'),
+            'description' => __('Set Button Text for Page 2', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'text'
         )
@@ -198,8 +198,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_url2',
         array(
-            'label' => 'Set URL for Page 2',
-            'description' => 'Set URL for Page 2',
+            'label' => __('Set URL for Page 2', 'stylemaven'),
+            'description' => __('Set URL for Page 2', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'url'
         )
@@ -225,8 +225,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_page3',
         array(
-            'label' => 'Set slider page 3',
-            'description' => 'set slider page 3',
+            'label' => __('Set slider page 3', 'stylemaven'),
+            'description' => __('set slider page 3', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'dropdown-pages'
         )
@@ -250,8 +250,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_text3',
         array(
-            'label' => 'Set Button Text for Page 3',
-            'description' => 'Set Button Text for Page 3',
+            'label' => __('Set Button Text for Page 3', 'stylemaven'),
+            'description' => __('Set Button Text for Page 3', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'text'
         )
@@ -275,8 +275,8 @@ function style_maven_customizer($wp_customize)
 
         'set_slider_button_url3',
         array(
-            'label' => 'Set URL for Page 3',
-            'description' => 'Set URL for Page 3',
+            'label' => __('Set URL for Page 3', 'stylemaven'),
+            'description' => __('Set URL for Page 3', 'stylemaven'),
             'section' => 'sec_slider',
             'type' => 'url'
         )
@@ -288,8 +288,8 @@ function style_maven_customizer($wp_customize)
     $wp_customize->add_section(
         'sec_home_page',
         array(
-            'title' => 'Home Page Products and Blog Settings',
-            'description' => 'Settings for Product Selection Section'
+            'title' =>  __('Home Page Products and Blog Settings', 'stylemaven'),
+            'description' => __('Settings for Product Selection Section', 'stylemaven'),
         )
     );
 
@@ -308,8 +308,8 @@ function style_maven_customizer($wp_customize)
 
         'set_popular_title',
         array(
-            'label' => 'Popular Products Title',
-            'description' => 'Popular Products Title',
+            'label' => __('Popular Products Title', 'stylemaven'),
+            'description' => __('Popular Products Title', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'text'
         )
@@ -335,8 +335,8 @@ function style_maven_customizer($wp_customize)
 
         'set_popular_max_num',
         array(
-            'label' => 'Popular Products Max Number',
-            'description' => 'Set number of popular products on home page',
+            'label' => __('Popular Products Max Number', 'stylemaven'),
+            'description' => __('Set number of popular products on home page', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'number'
         )
@@ -361,8 +361,8 @@ function style_maven_customizer($wp_customize)
 
         'set_popular_cols_numb',
         array(
-            'label' => 'Set number of popular product columns',
-            'description' => 'Set number of columns on home page',
+            'label' => __('Set number of popular product columns', 'stylemaven'),
+            'description' => __('Set number of columns on home page', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'number'
         )
@@ -383,8 +383,8 @@ function style_maven_customizer($wp_customize)
 
         'set_new_arrivals_title',
         array(
-            'label' => 'New Arrivals Title',
-            'description' => 'New Arrivals Title',
+            'label' => __('New Arrivals Title', 'stylemaven'),
+            'description' => __('New Arrivals Title', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'text'
         )
@@ -410,8 +410,8 @@ function style_maven_customizer($wp_customize)
 
         'set_arrivals_max_num',
         array(
-            'label' => 'New Arrivals Max Number',
-            'description' => 'Set number of new products on home page',
+            'label' => __('New Arrivals Max Number', 'stylemaven'),
+            'description' => __('Set number of new products on home page', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'number'
         )
@@ -436,8 +436,8 @@ function style_maven_customizer($wp_customize)
 
         'set_arrivals_cols_num',
         array(
-            'label' => 'New Arrivals Max Columns ',
-            'description' => 'Set number of new product colums on home page',
+            'label' => __('New Arrivals Max Columns ', 'stylemaven'),
+            'description' => __('Set number of new product colums on home page', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'number'
         )
@@ -464,8 +464,8 @@ function style_maven_customizer($wp_customize)
 
         'toggle_deal_of_week',
         array(
-            'label' => 'Display deal of the week',
-            'description' => 'Toggle to display deal of the product of the week',
+            'label' => __('Display deal of the week', 'stylemaven'),
+            'description' => __('Toggle to display deal of the product of the week', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'checkbox'
         )
@@ -484,8 +484,8 @@ function style_maven_customizer($wp_customize)
 
         'set_deal_title',
         array(
-            'label' => 'Deal of the week Title',
-            'description' => 'Deal Of The Week Title',
+            'label' => __('Deal of the week Title', 'stylemaven'),
+            'description' => __('Deal Of The Week Title', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'text'
         )
@@ -509,8 +509,8 @@ function style_maven_customizer($wp_customize)
 
         'set_deal_of_week',
         array(
-            'label' => 'Product of the week',
-            'description' => 'Set ID of the product of the week',
+            'label' => __('Product of the week', 'stylemaven'),
+            'description' => __('Set ID of the product of the week', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'number'
         )
@@ -532,8 +532,8 @@ function style_maven_customizer($wp_customize)
 
         'set_blog_title',
         array(
-            'label' => 'Blog Title',
-            'description' => 'Set the Title of The Blog',
+            'label' => __('Blog Title',  'stylemaven'),
+            'description' => __('Set the Title of The Blog', 'stylemaven'),
             'section' => 'sec_home_page',
             'type' => 'text'
         )
