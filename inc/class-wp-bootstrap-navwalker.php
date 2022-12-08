@@ -371,7 +371,7 @@ if (!class_exists('WP_Bootstrap_Navwalker')) :
 			$class            = $args['menu_class'] ? ' class="menu-fallback-menu ' . esc_attr($args['menu_class']) . '"' : ' class="menu-fallback-menu"';
 			$id               = $args['menu_id'] ? ' id="' . esc_attr($args['menu_id']) . '"' : '';
 			$fallback_output .= '<ul' . $id . $class . '>';
-			$fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link" title="' . esc_attr__('Add a menu', 'stylemaven') . '">' . esc_html__('Add a menu', 'stylemaven') . '</a></li>';
+			$fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link" title="' . esc_attr__('Add a menu', 'style-maven') . '">' . esc_html__('Add a menu', 'style-maven') . '</a></li>';
 			$fallback_output .= '</ul>';
 
 			// Menu container closing tag.

@@ -59,18 +59,18 @@
                                                 if (is_user_logged_in()) {
                                                 ?>
                                                     <li>
-                                                        <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link"><?php esc_html_e('My Account', 'stylemaven') ?></a>
+                                                        <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link"><?php esc_html_e('My Account', 'style-maven') ?></a>
                                                     </li>
                                                     <li>
                                                         <!-- Pass the url to the account page -->
-                                                        <a href="<?php echo esc_url(wp_logout_url(get_permalink(get_option('woocommerce_myaccount_page_id')))) ?>" class="nav-link"><?php esc_html_e('Log Out', 'stylemaven') ?></a>
+                                                        <a href="<?php echo esc_url(wp_logout_url(get_permalink(get_option('woocommerce_myaccount_page_id')))) ?>" class="nav-link"><?php esc_html_e('Log Out', 'style-maven') ?></a>
                                                     </li>
                                             </ul>
 
                                         <?php } else {
                                         ?>
                                             <li>
-                                                <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link"><?php esc_html_e('Login/Register', 'stylemaven') ?></a>
+                                                <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))) ?>" class="nav-link"><?php esc_html_e('Login/Register', 'style-maven') ?></a>
                                             </li>
 
                                         <?php } ?>
@@ -88,7 +88,7 @@
                                 <div class="col-12">
                                     <nav class="navbar navbar-expand-md navbar-light" role="navigation">
                                         <!-- Brand and toggle get grouped for better mobile display -->
-                                        <button class=" main-menu navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'stylemaven'); ?>">
+                                        <button class=" main-menu navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'style-maven'); ?>">
                                             <span class="navbar-toggler-icon"></span>
                                         </button>
 

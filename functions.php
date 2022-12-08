@@ -10,7 +10,7 @@
  */
 if (!file_exists(get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php')) {
     // File does not exist... return an error.
-    return new WP_Error('class-wp-bootstrap-navwalker-missing', esc_html('It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'stylemaven'));
+    return new WP_Error('class-wp-bootstrap-navwalker-missing', esc_html('It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'style-maven'));
 } else {
     // File exists... require it.
     require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
@@ -61,13 +61,13 @@ function style_maven_config()
 
     register_nav_menus(
         array(
-            'style_maven_main_menu' => esc_html('Style Maven Main Menu', 'stylemaven'),
-            'style_maven_footer_menu' => esc_html__('Style Maven Footer Menu', 'stylemaven')
+            'style_maven_main_menu' => esc_html('Style Maven Main Menu', 'style-maven'),
+            'style_maven_footer_menu' => esc_html__('Style Maven Footer Menu', 'style-maven')
 
         )
     );
 
-    $textdomain = "stylemaven";
+    $textdomain = "style-maven";
     //child theme
     load_theme_textdomain($textdomain, get_stylesheet_directory() . '/languages/');
     //parent
@@ -146,8 +146,8 @@ function style_maven_sidebars()
 {
     register_sidebar(
         array(
-            'name'          => esc_html__('Style Maven Main Sidebar', 'stylemaven'),
-            'description'   => esc_html__('Drag and drop widgets here', 'stylemaven'),
+            'name'          => esc_html__('Style Maven Main Sidebar', 'style-maven'),
+            'description'   => esc_html__('Drag and drop widgets here', 'style-maven'),
             'id'            => 'style-maven-sidebar-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -159,8 +159,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => esc_html__('Style Maven Woocommerce Sidebar', 'stylemaven'),
-            'description'   => esc_html__('Drag and drop Woocommerce widgets here', 'stylemaven'),
+            'name'          => esc_html__('Style Maven Woocommerce Sidebar', 'style-maven'),
+            'description'   => esc_html__('Drag and drop Woocommerce widgets here', 'style-maven'),
             'id'            => 'style-maven-woocommerce-sidebar-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -171,8 +171,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => esc_html__('Style Maven Footer Widget 1', 'stylemaven'),
-            'description'   => esc_html__('Drag and drop Footer widgets here', 'stylemaven'),
+            'name'          => esc_html__('Style Maven Footer Widget 1', 'style-maven'),
+            'description'   => esc_html__('Drag and drop Footer widgets here', 'style-maven'),
             'id'            => 'style-maven-footer-1',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -182,8 +182,8 @@ function style_maven_sidebars()
     );
     register_sidebar(
         array(
-            'name'          => esc_html__('Style Maven Footer Widget 2', 'stylemaven'),
-            'description'   => esc_html__('Drag and drop Footer widgets here', 'stylemaven'),
+            'name'          => esc_html__('Style Maven Footer Widget 2', 'style-maven'),
+            'description'   => esc_html__('Drag and drop Footer widgets here', 'style-maven'),
             'id'            => 'style-maven-footer-2',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
@@ -194,8 +194,8 @@ function style_maven_sidebars()
 
     register_sidebar(
         array(
-            'name'          => esc_html__('Style Maven Footer Widget 3', 'stylemaven'),
-            'description'   => esc_html__('Drag and drop Footer widgets here', 'stylemaven'),
+            'name'          => esc_html__('Style Maven Footer Widget 3', 'style-maven'),
+            'description'   => esc_html__('Drag and drop Footer widgets here', 'style-maven'),
             'id'            => 'style-maven-footer-3',
             'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
             'after_widget'  => '</div>',
